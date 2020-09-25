@@ -1,0 +1,21 @@
+@import "lesson";
+@include lesson-page;
+.main{
+	.btn-link{
+		.btn-link-difficulty{
+			display: block;
+		}
+		.btn-link-home{
+		}
+	}
+	.intermediate{
+		$color: #ff7c5c;
+		$background: #ff7c5c;
+		@include botton-sticky($color,$background);
+	}
+	.advanced{
+		$color: #ff7c5c;
+		$background: #ff7c5c;
+		@include botton-sticky($color,$background);
+	}
+}

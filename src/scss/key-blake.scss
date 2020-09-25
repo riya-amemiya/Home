@@ -1,0 +1,20 @@
+/* Scss Document */
+@import "template";
+.main{
+	text-align: center;
+	.top{
+		.heading{
+			.heading-image{
+				padding-top: 20px;
+			}
+		}
+		.key-blake{
+			.btn{
+				font-size: 15px;
+				$color:#FFF;
+				$background: #AC1212;
+				@include button-circle($color,$background);	
+			}
+		}
+	}
+}

@@ -1,0 +1,8 @@
+/* Scss Document */
+@import "template";
+.error{
+	text-align: center;
+	.btn-real-dent {
+		@include button-home;
+	}
+}

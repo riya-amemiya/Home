@@ -1,0 +1,1 @@
+@function lighten-f($color-f,$percent){	$colors: lighten($color-f,$percent);	@return $colors;}@function darken-f($color-f,$percent){	$colors: darken($color-f,$percent);	@return $colors;}

@@ -1,0 +1,1 @@
+@import "template";@include footer;$color: #FFF;$background: #5dca88;body{	text-align: center;	.text-p{		font-size: 20px;	}	.btn{		@include button-default($color,$background);	}	.header{		@include heading-tag($color, $background);	}}

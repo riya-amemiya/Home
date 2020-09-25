@@ -1,0 +1,27 @@
+/* Scss Document */
+@import "template";
+body{background-color: black;}
+.main{
+	color: white;
+	text-align: center;
+	.heading{
+		h1{
+			font-size: 40px;
+		}
+		p{
+			font-size: 20px;
+		}
+	}
+	.lessons{
+		text-align: center;
+		.lesson{
+			display: inline-block;
+			.btn{
+				font-size: 20px;
+				$color:#FFF;
+				$background: #AC1212;
+				@include button-circle($color,$background);
+			}
+		}
+	}
+}
