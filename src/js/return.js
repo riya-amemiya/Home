@@ -1,1 +1,5 @@
-// JavaScript Document$(function () {  $("#heading").slideDown(1000);});
+// JavaScript Document
+import '../scss/return.scss'
+$(function () {
+  $("#heading").slideDown(1000);
+});

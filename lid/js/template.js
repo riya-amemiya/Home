@@ -1,4 +1,3 @@
-console.log('a');
 $(function () {
   $('.btn-hover').hover(function () {
     $(this).find('i').addClass('faa-shake animated');

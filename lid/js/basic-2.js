@@ -1,3 +1,4 @@
+import './../scss/basic-2.scss';
 $(function () {
   function btntaga() {
     $('#btn-tag-p').fadeOut(300);

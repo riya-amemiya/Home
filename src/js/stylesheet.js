@@ -7,7 +7,9 @@ import '../img/html-5.svg'
 import '../img/c.svg'
 import '../img/java.svg'
 import '../img/python.svg'
+import FCC from './FCC'
 //import '../js/template'
+FCC.hello();
 $(function () {
 	//モーダルの雛形
 	class modalclass {

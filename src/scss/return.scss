@@ -1,60 +1,77 @@
 @import "template";
-body{ margin: 0px; }
-.main{
+
+body {
+	margin: 0px;
+}
+
+.main {
 	text-align: center;
-	.headings{
+
+	.headings {
 		@include background-image("../img/notebook-1280538_1280.jpg");
 		width: 100%;
 		height: 600px;
 		color: white;
 		display: none;
-		.heading-top{
+
+		.heading-top {
 			padding-top: 150px;
-			.clear{
+
+			.clear {
 				clear: left;
 				padding-bottom: 40px;
 			}
 		}
+
 		.btn {
-			$color:#FFF;
+			$color: #FFF;
 			$background: #5dca88;
-			@include button-default($color,$background);
+			@include button-default($color, $background);
 		}
 	}
-	.heading-main{
+
+	.heading-main {
 		font-size: 50px;
 	}
-	.scss{
-	}
-	.subheading{
+
+	.scss {}
+
+	.subheading {
 		font-size: 40px;
 	}
-	.lessons{
+
+	.lessons {
 		display: inline-block;
 		padding-right: 20px;
-		.btn{
+
+		.btn {
 			font-size: 30px;
 		}
-		.basic{
-			$color:#FFF;
+
+		.basic {
+			$color: #FFF;
 			$background: #5dca88;
-			@include button-circle($color,$background);
+			@include button-circle($color, $background);
 		}
-		.intermediate{
-			$color:#FFF;
+
+		.intermediate {
+			$color: #FFF;
 			$background: #ffdb4f;
-			@include button-circle($color,$background);
+			@include button-circle($color, $background);
 		}
-		.advanced{
-			$color:#FFF;
+
+		.advanced {
+			$color: #FFF;
 			$background: #e73562;
-			@include button-circle($color,$background);
+			@include button-circle($color, $background);
 		}
-		.scss{
+
+		.scss {
 			$color: #FFF;
 			$background: #00ccff;
-			@include button-circle($color,$background);
+			@include button-circle($color, $background);
 		}
 	}
 }
+
 @include footer;
