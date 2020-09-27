@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="lessons basics">
+            <div class="top">
+                <h2><%= htmlWebpackPlugin.options.title %></h2>
+            </div>
+            <div class="lesson">
+                <a href="HTML_<%= htmlWebpackPlugin.options.originalHeader %>-1.html">
+                    <span class="btn message">第1章</span>
+                </a>
+            </div>
+            <div class="lesson">
+                <a href="HTML_<%= htmlWebpackPlugin.options.originalHeader %>-2.html">
+                    <span class="btn message">第2章</span>
+                </a>
+            </div>
+            <div class="lesson">
+                <a href="HTML_<%= htmlWebpackPlugin.options.originalHeader %>-3.html">
+                    <span class="btn message">第3章</span>
+                </a>
+            </div>
+            <div class="lesson">
+                <a href="HTML_<%= htmlWebpackPlugin.options.originalHeader %>-4.html">
+                    <span class="btn message">第4章</span>
+                </a>
+            </div>
+        </div>
+        <div>
+            <div class="btn-link"> <a href="index.html" class="btn-link-home">ホームに戻る</a> </div>
+            <div class="btn-link" id="link-difficulty">
+                <p class="btn-link-difficulty">他の難易度へ</p>
+            </div>
+        </div>
+        <div class="airs"></div>
+        <div class="links">
+            <div class="test">
+                <a href="HTML_<%= htmlWebpackPlugin.options.url1 %>.html"
+                    class="link"><%= htmlWebpackPlugin.options.get1 %></a>
+            </div>
+            <div class="test">
+                <a href="HTML_<%= htmlWebpackPlugin.options.url2 %>.html"
+                    class="link"><%= htmlWebpackPlugin.options.get2 %></a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

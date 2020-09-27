@@ -1,21 +1,24 @@
 @import "lesson";
 @include lesson-page;
-.main{
-	.btn-link{
-		.btn-link-difficulty{
+
+.main {
+	.btn-link {
+		.btn-link-difficulty {
 			display: block;
 		}
-		.btn-link-home{
-		}
+
+		.btn-link-home {}
 	}
-	.intermediate{
+
+	.intermediate {
 		$color: #ff7c5c;
 		$background: #ff7c5c;
-		@include botton-sticky($color,$background);
+		@include button-sticky($color, $background);
 	}
-	.advanced{
+
+	.advanced {
 		$color: #ff7c5c;
 		$background: #ff7c5c;
-		@include botton-sticky($color,$background);
+		@include button-sticky($color, $background);
 	}
 }

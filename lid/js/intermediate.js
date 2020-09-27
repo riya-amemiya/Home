@@ -1,4 +1,5 @@
 // JavaScript Document
+import './../scss/intermediate.scss';
 $(function () {
   $('#link-difficulty').click(function () {
     if ($('.links').hasClass('air')) {
