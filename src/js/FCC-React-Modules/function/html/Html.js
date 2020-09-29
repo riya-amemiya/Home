@@ -1,7 +1,13 @@
 class html {
     constructor() {}
-    getid(id = "") {
-        return document.getElementById(id)
+    get(id = "") {
+        if (id.indexOf('.') != -1) {
+            return document.getElementsByClassName(id)
+        } else if (id.indexOf('#') != -1) {
+            return document.getElementById(id)
+        } else {
+            return document.getElementsByTagName(id)
+        }
     }
     html(id = "", html = "") {
         return document.getElementById(id).innerHTML = html

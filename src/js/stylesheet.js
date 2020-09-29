@@ -10,6 +10,7 @@ import '../img/python.svg'
 import FCC from './FCC'
 //import '../js/template'
 FCC.hello();
+console.log(FCC.Html.get('body'));
 $(function () {
 	//モーダルの雛形
 	class modalclass {
