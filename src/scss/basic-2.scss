@@ -1,1 +1,52 @@
-@import "template";$color: #FFF;$background: #5dca88;body{	.lesson{display: none; margin-top: 10px;}	.tag{display: none; width: 250px; margin: 0px auto;}	.btn-tag{		@include button-download($background,$background);		margin-top: 10px;	}	text-align: center;	.top{		font-size: 30px;		.btn{			@include button-default($color,$background);		}	}	.text-p{		font-size: 20px;	}	.link-download{		@include button-download(#FFC107,#FFC107);	}	.foorm	{		width: 25%;		margin: 0px auto;		margin-bottom: 10px;	}	.foorm-btn{		@include button-download(#FFC107,#FFC107);	}}@include footer;
+/*basic2*/
+@import "template";
+$color: #FFF;
+$background: #5dca88;
+
+body {
+	.lesson {
+		display: none;
+		margin-top: 10px;
+	}
+
+	.tag {
+		display: none;
+		width: 250px;
+		margin: 0px auto;
+	}
+
+	.btn-tag {
+		@include button-download($background, $background);
+		margin-top: 10px;
+	}
+
+	text-align: center;
+
+	.top {
+		font-size: 30px;
+
+		.btn {
+			@include button-default($color, $background);
+		}
+	}
+
+	.text-p {
+		font-size: 20px;
+	}
+
+	.link-download {
+		@include button-download(#FFC107, #FFC107);
+	}
+
+	.foorm {
+		width: 25%;
+		margin: 0px auto;
+		margin-bottom: 10px;
+	}
+
+	.foorm-btn {
+		@include button-download(#FFC107, #FFC107);
+	}
+}
+
+@include footer;

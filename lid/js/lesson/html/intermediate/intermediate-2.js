@@ -1,0 +1,1 @@
+import './../../../../scss/intermediate-2.scss';

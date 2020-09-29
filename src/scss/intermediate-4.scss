@@ -1,0 +1,1 @@
+@import "template";$color: #FFF;$background: #5dca88;body{	text-align: center;	.header{		@include heading-tag($color,$background);			}}

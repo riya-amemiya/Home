@@ -1,4 +1,6 @@
-import './../scss/basic-2.scss';
+// JavaScript Document
+
+import './../../../../scss/basic-3.scss';
 $(function () {
   function btntaga() {
     $('#btn-tag-p').fadeOut(300);
@@ -17,9 +19,8 @@ $(function () {
     $('.contents').text("");
   });
   $('.foorm-btn').click(function () {
-    $('.contents').text("");
     let url = $('.text-url').val();
-    $('.contents').append(`<p>${url}</p>`);
+    $('.contents').append(url);
   });
   $('#btn-tag-a').click(function () {
     btntaga();

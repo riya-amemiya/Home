@@ -1,4 +1,5 @@
-import './../scss/basic-1.scss';
+import './../../../../scss/basic-1.scss';
+
 $(function () {
   $('.btn-p').click(function () {
     $('.active').removeClass('active');
