@@ -1,239 +1,248 @@
-class maths {
-  constructor() {
-    this.random = num => {
-      let test = Math.floor(Math.random() * num);
-      return test;
-    };
+"use strict";
 
-    this.sqrt = n => {
-      //平方根
-      let sqrts = Math.sqrt(n);
-      return sqrts;
-    };
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
 
-    this.repetition = x => {
-      //階乗
-      let age = 1;
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-      for (let i = 2; i <= x; i++) {
-        age *= i;
+var maths = function maths() {
+  _classCallCheck(this, maths);
+
+  this.random = function (num) {
+    var test = Math.floor(Math.random() * num);
+    return test;
+  };
+
+  this.sqrt = function (n) {
+    //平方根
+    var sqrts = Math.sqrt(n);
+    return sqrts;
+  };
+
+  this.repetition = function (x) {
+    //階乗
+    var age = 1;
+
+    for (var i = 2; i <= x; i++) {
+      age *= i;
+    }
+
+    return age;
+  };
+
+  this.ncr = function (n, r) {
+    //nCr
+    var x;
+    var z;
+    var y;
+    var age = 1;
+    y = n;
+    z = r;
+    x = 0;
+
+    while (x == 0) {
+      if (r == 1) {
+        y = y * r;
       }
 
-      return age;
-    };
+      r--;
 
-    this.ncr = (n, r) => {
-      //nCr
-      let x;
-      let z;
-      let y;
-      let age = 1;
-      y = n;
-      z = r;
-      x = 0;
+      if (r == 0) {
+        x++;
+      } else {
+        n--;
 
-      while (x == 0) {
-        if (r == 1) {
-          y = y * r;
-        }
-
-        r--;
-
-        if (r == 0) {
+        if (n == 0) {
           x++;
-        } else {
-          n--;
-
-          if (n == 0) {
-            x++;
-            break;
-          }
-
-          y = y * n;
+          break;
         }
+
+        y = y * n;
       }
+    }
 
-      for (let i = 2; i <= z; i++) {
-        age *= i;
-      }
+    for (var i = 2; i <= z; i++) {
+      age *= i;
+    }
 
-      y = y / age;
-      return y;
-    };
+    y = y / age;
+    return y;
+  };
 
-    this.ncrs = (n, r) => {
-      //重複を許して取り出す
-      n = n + r - 1;
-      n = Maths.ncr(n, r);
-      return n;
-    };
+  this.ncrs = function (n, r) {
+    //重複を許して取り出す
+    n = n + r - 1;
+    n = Maths.ncr(n, r);
+    return n;
+  };
 
-    this.gcd = (f, x) => {
-      //最大公約数
-      let r, tmp;
+  this.gcd = function (f, x) {
+    //最大公約数
+    var r, tmp;
 
-      if (f < x) {
-        tmp = f;
-        f = x;
-        x = tmp;
-      }
-      /* ユークリッドの互除法 */
+    if (f < x) {
+      tmp = f;
+      f = x;
+      x = tmp;
+    }
+    /* ユークリッドの互除法 */
 
 
+    r = f % x;
+
+    while (r != 0) {
+      f = x;
+      x = r;
       r = f % x;
+    }
 
-      while (r != 0) {
-        f = x;
-        x = r;
-        r = f % x;
+    return x;
+  };
+
+  this.npr = function (n, r) {
+    //nPr
+    var y;
+    var x = 0;
+    y = n;
+
+    while (x == 0) {
+      if (r == 1) {
+        y = y * r;
       }
 
-      return x;
-    };
+      r--;
 
-    this.npr = (n, r) => {
-      //nPr
-      let y;
-      let x = 0;
-      y = n;
+      if (r == 0) {
+        x++;
+      } else {
+        n--;
 
-      while (x == 0) {
-        if (r == 1) {
-          y = y * r;
-        }
-
-        r--;
-
-        if (r == 0) {
+        if (n == 0) {
           x++;
-        } else {
-          n--;
-
-          if (n == 0) {
-            x++;
-            break;
-          }
-
-          y = y * n;
+          break;
         }
+
+        y = y * n;
       }
+    }
 
-      return y;
-    };
+    return y;
+  };
 
-    this.ratio = (a, b, x, y) => {
-      //比率
-      a *= y;
-      b *= x;
+  this.ratio = function (a, b, x, y) {
+    //比率
+    a *= y;
+    b *= x;
 
-      if (a < b) {
-        if (b % a == 0) {
-          return b / a;
-        } else {
-          return `${a}/${b}`;
-        }
+    if (a < b) {
+      if (b % a == 0) {
+        return b / a;
       } else {
-        if (a % b == 0) {
-          return a / b;
-        } else {
-          return `${b}/${a}`;
-        }
+        return "".concat(a, "/").concat(b);
       }
-    };
-
-    this.diagonal = n => {
-      //対角線の数
-      n = n * (n - 3) / 2;
-      return n;
-    };
-
-    this.pow = (num, n) => {
-      //xのy乗
-      let nums = num;
-
-      for (let i = 2; i <= n; i++) {
-        nums *= num;
-      }
-
-      return nums;
-    };
-
-    this.cone = (num1, num2) => {
-      num1 *= num1;
-      num2 *= num1;
-
-      if (num2 % 3 == 0) {
-        return num2 / 3;
+    } else {
+      if (a % b == 0) {
+        return a / b;
       } else {
-        return `${num2}/3`;
+        return "".concat(b, "/").concat(a);
       }
-    };
+    }
+  };
 
-    this.pMultiplicative = (a, b) => {
-      a = `${a * a}+${2 * a * b}+${b * b}`;
-      return a;
-    };
+  this.diagonal = function (n) {
+    //対角線の数
+    n = n * (n - 3) / 2;
+    return n;
+  };
 
-    this.rpMultiplicative = (a, b) => {
-      a = `(${Math.sqrt(a)}+${Math.sqrt(b)})^2`;
-      return a;
-    };
+  this.pow = function (num, n) {
+    //xのy乗
+    var nums = num;
 
-    this.mMultiplicative = (a, b) => {
-      a = `${a * a}-${2 * a * b}+${b * b}`;
-      return a;
-    };
+    for (var i = 2; i <= n; i++) {
+      nums *= num;
+    }
 
-    this.rmMultiplicative = (a, b) => {
-      a = `(${Math.sqrt(a)}-${Math.sqrt(b)})^2`;
-      return a;
-    };
+    return nums;
+  };
 
-    this.pmMultiplicative = (a, b) => {
-      a = `${a * a}-${b * b}`;
-      return a;
-    };
+  this.cone = function (num1, num2) {
+    num1 *= num1;
+    num2 *= num1;
 
-    this.rpmMultiplicative = (a, b) => {
-      a = `(${Math.sqrt(a)}+${Math.sqrt(b)})(${Math.sqrt(a)}-${Math.sqrt(b)})`;
-      return a;
-    };
+    if (num2 % 3 == 0) {
+      return num2 / 3;
+    } else {
+      return "".concat(num2, "/3");
+    }
+  };
 
-    this.Pythagorean = (a, b) => {
-      a = a * a + b * b;
-      return a;
-    };
+  this.pMultiplicative = function (a, b) {
+    a = "".concat(a * a, "+").concat(2 * a * b, "+").concat(b * b);
+    return a;
+  };
 
-    this.rPythagorean = (a, b) => {
-      a = a * a - b * b;
-      return a;
-    };
+  this.rpMultiplicative = function (a, b) {
+    a = "(".concat(Math.sqrt(a), "+").concat(Math.sqrt(b), ")^2");
+    return a;
+  };
 
-    this.Binarynumber = num => {
-      num = num.length;
+  this.mMultiplicative = function (a, b) {
+    a = "".concat(a * a, "-").concat(2 * a * b, "+").concat(b * b);
+    return a;
+  };
 
-      for (let i = 1; i < num; i++) {
-        num = num;
-        console.log(num);
-      }
+  this.rmMultiplicative = function (a, b) {
+    a = "(".concat(Math.sqrt(a), "-").concat(Math.sqrt(b), ")^2");
+    return a;
+  };
 
-      return num;
-    };
+  this.pmMultiplicative = function (a, b) {
+    a = "".concat(a * a, "-").concat(b * b);
+    return a;
+  };
 
-    this.k = num => {
-      num += 273;
-      return num;
-    };
-    /*this.Tem = (c) => {
-        let k = c + 273.15;
-    	let f = 1.8 * c + 32;
-    	let r = 1.8 * k;
-        const tet = `ケルビン: ${k} 摂氏度: ${c} 華氏度: ${f} ランキン度: ${r}`;
-        return (k, c, f, r);
-    }*/
+  this.rpmMultiplicative = function (a, b) {
+    a = "(".concat(Math.sqrt(a), "+").concat(Math.sqrt(b), ")(").concat(Math.sqrt(a), "-").concat(Math.sqrt(b), ")");
+    return a;
+  };
 
-  }
+  this.Pythagorean = function (a, b) {
+    a = a * a + b * b;
+    return a;
+  };
 
-}
+  this.rPythagorean = function (a, b) {
+    a = a * a - b * b;
+    return a;
+  };
 
-export default maths;
+  this.Binarynumber = function (num) {
+    num = num.length;
+
+    for (var i = 1; i < num; i++) {
+      num = num;
+      console.log(num);
+    }
+
+    return num;
+  };
+
+  this.k = function (num) {
+    num += 273;
+    return num;
+  };
+  /*this.Tem = (c) => {
+      let k = c + 273.15;
+  	let f = 1.8 * c + 32;
+  	let r = 1.8 * k;
+      const tet = `ケルビン: ${k} 摂氏度: ${c} 華氏度: ${f} ランキン度: ${r}`;
+      return (k, c, f, r);
+  }*/
+
+};
+
+var _default = maths;
+exports["default"] = _default;

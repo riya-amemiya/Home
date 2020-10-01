@@ -1,4 +1,7 @@
-import './../../../../scss/basic-1.scss';
+"use strict";
+
+require("./../../../../scss/basic-1.scss");
+
 $(function () {
   $('.btn-p').click(function () {
     $('.active').removeClass('active');

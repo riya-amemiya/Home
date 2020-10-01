@@ -1,1 +1,3 @@
-import './../../scss/python.scss';
+"use strict";
+
+require("./../../scss/python.scss");

@@ -1,4 +1,10 @@
-let Lithium = {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+var Lithium = {
   name: "リチウム",
   num: 3,
   text: "Li",
@@ -7,4 +13,5 @@ let Lithium = {
   period: 1,
   Atomicweight: "6.941"
 };
-export default Lithium;
+var _default = Lithium;
+exports["default"] = _default;

@@ -1,5 +1,8 @@
+"use strict";
+
+require("./../scss/intermediate.scss");
+
 // JavaScript Document
-import './../scss/intermediate.scss';
 $(function () {
   $('#link-difficulty').click(function () {
     if ($('.links').hasClass('air')) {

@@ -1,1 +1,3 @@
-import './../../../../scss/basic-4.scss';
+"use strict";
+
+require("./../../../../scss/basic-4.scss");

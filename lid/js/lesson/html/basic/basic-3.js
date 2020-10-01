@@ -1,5 +1,8 @@
+"use strict";
+
+require("./../../../../scss/basic-3.scss");
+
 // JavaScript Document
-import './../../../../scss/basic-3.scss';
 $(function () {
   function btntaga() {
     $('#btn-tag-p').fadeOut(300);
@@ -19,7 +22,7 @@ $(function () {
     $('.contents').text("");
   });
   $('.foorm-btn').click(function () {
-    let url = $('.text-url').val();
+    var url = $('.text-url').val();
     $('.contents').append(url);
   });
   $('#btn-tag-a').click(function () {

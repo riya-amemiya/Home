@@ -1,4 +1,10 @@
-let Hydrogen = {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+var Hydrogen = {
   name: "水素",
   num: 1,
   text: "H",
@@ -7,4 +13,5 @@ let Hydrogen = {
   period: 1,
   Atomicweight: "1.00794"
 };
-export default Hydrogen;
+var _default = Hydrogen;
+exports["default"] = _default;

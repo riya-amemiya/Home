@@ -1,1 +1,3 @@
-import '../../scss/html.scss';
+"use strict";
+
+require("../../scss/html.scss");

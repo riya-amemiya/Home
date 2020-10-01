@@ -1,4 +1,12 @@
-const conversion = (text, mode = 0) => {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.code = exports.conversion = void 0;
+
+var conversion = function conversion(text) {
+  var mode = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
   text = text.replace(/\s+/g, '');
 
   if (mode == 0) {
@@ -170,7 +178,10 @@ const conversion = (text, mode = 0) => {
   return text;
 };
 
-const code = (text, num = 0) => {
+exports.conversion = conversion;
+
+var code = function code(text) {
+  var num = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
   text = conversion(text, num);
   text = text.replace(/A/g, 'a');
   text = text.replace(/B/g, 'b');
@@ -243,4 +254,4 @@ const code = (text, num = 0) => {
   return text;
 };
 
-export { conversion, code };
+exports.code = code;

@@ -1,4 +1,7 @@
-import '../../../../scss/basic-2.scss';
+"use strict";
+
+require("../../../../scss/basic-2.scss");
+
 $(function () {
   function btntaga() {
     $('#btn-tag-p').fadeOut(300);
@@ -19,8 +22,8 @@ $(function () {
   });
   $('.foorm-btn').click(function () {
     $('.contents').text("");
-    let url = $('.text-url').val();
-    $('.contents').append(`<p>${url}</p>`);
+    var url = $('.text-url').val();
+    $('.contents').append("<p>".concat(url, "</p>"));
   });
   $('#btn-tag-a').click(function () {
     btntaga();

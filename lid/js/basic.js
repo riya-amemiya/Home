@@ -1,4 +1,7 @@
-import './../scss/basic.scss';
+"use strict";
+
+require("./../scss/basic.scss");
+
 $(function () {
   $('#link-difficulty').click(function () {
     if ($('.links').hasClass('air')) {

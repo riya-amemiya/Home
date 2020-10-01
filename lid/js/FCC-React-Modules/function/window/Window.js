@@ -1,84 +1,97 @@
-class windows {
-  constructor() {
-    this.Url = () => {
-      return window.location.href;
-    };
+"use strict";
 
-    this.Urlhash = () => {
-      return window.location.hash;
-    };
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
 
-    this.Urlsearch = () => {
-      return window.location.search;
-    };
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-    this.Width = () => {
-      return window.innerWidth;
-    };
+var windows = function windows() {
+  _classCallCheck(this, windows);
 
-    this.Height = () => {
-      return window.innerHeight;
-    };
+  this.Url = function () {
+    return window.location.href;
+  };
 
-    this.ScreenWidth = () => {
-      return window.screen.width;
-    };
+  this.Urlhash = function () {
+    return window.location.hash;
+  };
 
-    this.ScreenHeight = () => {
-      return window.screen.height;
-    };
+  this.Urlsearch = function () {
+    return window.location.search;
+  };
 
-    this.Urlorigin = () => {
-      return window.location.origin;
-    };
+  this.Width = function () {
+    return window.innerWidth;
+  };
 
-    this.Open = (url, name, optional = 'top=' + window.innerHeight / 2 - 1000 / 2 + ',left=' + window.innerWidth / 2 - 1000 / 2 + ',width=1000,height=650', object = () => {}) => {
-      object();
-      return window.open(url, name, optional);
-    };
+  this.Height = function () {
+    return window.innerHeight;
+  };
 
-    this.moveTo = (object, num1, num2) => {
-      return object.moveTo(num1, num2);
-    };
+  this.ScreenWidth = function () {
+    return window.screen.width;
+  };
 
-    this.resizeTo = (object, num1, num2) => {
-      return object.resizeTo(num1, num2);
-    };
+  this.ScreenHeight = function () {
+    return window.screen.height;
+  };
 
-    this.resizeBy = (object, num1, num2) => {
-      return object.resizeBy(num1, num2);
-    };
+  this.Urlorigin = function () {
+    return window.location.origin;
+  };
 
-    this.Print = () => {
-      return window.print();
-    };
+  this.Open = function (url, name) {
+    var optional = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'top=' + window.innerHeight / 2 - 1000 / 2 + ',left=' + window.innerWidth / 2 - 1000 / 2 + ',width=1000,height=650';
+    var object = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : function () {};
+    object();
+    return window.open(url, name, optional);
+  };
 
-    this.Copy = (text = () => {}) => {
-      window.addEventListener('copy', event => {
-        text();
-      });
-    };
+  this.moveTo = function (object, num1, num2) {
+    return object.moveTo(num1, num2);
+  };
 
-    this.Load = (text = () => {}) => {
-      window.addEventListener('load', event => {
-        text();
-      });
-    };
+  this.resizeTo = function (object, num1, num2) {
+    return object.resizeTo(num1, num2);
+  };
 
-    this.Alert = text => {
-      return window.alert(text);
-    };
+  this.resizeBy = function (object, num1, num2) {
+    return object.resizeBy(num1, num2);
+  };
 
-    this.setInterval = (Callback, num) => {
-      return window.setInterval(Callback, num);
-    };
+  this.Print = function () {
+    return window.print();
+  };
 
-    this.onresize = () => {
-      return window.onresize;
-    };
-  }
+  this.Copy = function () {
+    var text = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : function () {};
+    window.addEventListener('copy', function (event) {
+      text();
+    });
+  };
 
-}
+  this.Load = function () {
+    var text = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : function () {};
+    window.addEventListener('load', function (event) {
+      text();
+    });
+  };
 
-let Window = new windows();
-export default Window;
+  this.Alert = function (text) {
+    return window.alert(text);
+  };
+
+  this.setInterval = function (Callback, num) {
+    return window.setInterval(Callback, num);
+  };
+
+  this.onresize = function () {
+    return window.onresize;
+  };
+};
+
+var Window = new windows();
+var _default = Window;
+exports["default"] = _default;

@@ -1,8 +1,21 @@
-import Show from "./Show";
-import Hydrogen from "./Data/HydrogenData";
-import Helium from "./Data/HeliumData";
-import Lithium from "./Data/LithiumData";
-let returntext = {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.returntext = exports.Science = void 0;
+
+var _Show = _interopRequireDefault(require("./Show"));
+
+var _HydrogenData = _interopRequireDefault(require("./Data/HydrogenData"));
+
+var _HeliumData = _interopRequireDefault(require("./Data/HeliumData"));
+
+var _LithiumData = _interopRequireDefault(require("./Data/LithiumData"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+var returntext = {
   name: null,
   num: null,
   text: null,
@@ -12,14 +25,15 @@ let returntext = {
   Atomicweight: null,
   type: null
 };
+exports.returntext = returntext;
 
-const Sciences = numOrtext => {
+var Sciences = function Sciences(numOrtext) {
   if (numOrtext == 1 || numOrtext == "H") {
-    returntext = Hydrogen;
+    exports.returntext = returntext = _HydrogenData["default"];
   } else if (numOrtext == 2 || numOrtext == "He") {
-    returntext = Helium;
+    exports.returntext = returntext = _HeliumData["default"];
   } else if (numOrtext == 3 || numOrtext == "Li") {
-    returntext = Lithium;
+    exports.returntext = returntext = _LithiumData["default"];
   } else if (numOrtext == 4 || numOrtext == "Be") {
     returntext.name = "ベリリウム";
     returntext.Classification = "金属";
@@ -52,9 +66,9 @@ const Sciences = numOrtext => {
   }
 };
 
-const Science = req => {
+var Science = function Science(req) {
   Sciences(req);
-  Show(returntext.name, returntext.num, returntext.text, returntext.Classification, returntext.Tribe, returntext.period, returntext.Atomicweight, returntext.type);
+  (0, _Show["default"])(returntext.name, returntext.num, returntext.text, returntext.Classification, returntext.Tribe, returntext.period, returntext.Atomicweight, returntext.type);
 };
 
-export { Science, returntext };
+exports.Science = Science;

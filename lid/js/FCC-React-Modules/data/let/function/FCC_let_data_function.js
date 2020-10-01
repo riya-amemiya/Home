@@ -1,29 +1,48 @@
-let Random = num => {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Ratio = exports.Gcd = exports.nPr = exports.Repetition = exports.Pow = exports.nCr = exports.Spt = exports.Com = exports.Push = exports.Random = void 0;
+
+var Random = function Random(num) {
   return Math.floor(Math.random() * num);
 };
 
-let Push = (array, text) => {
-  let Pushs = array.push(text);
+exports.Random = Random;
+
+var Push = function Push(array, text) {
+  var Pushs = array.push(text);
   return Pushs;
 };
 
-let Com = (num, num2) => {
-  let gcdnum = Gcd(3, 4);
+exports.Push = Push;
+
+var Com = function Com(num, num2) {
+  var gcdnum = Gcd(3, 4);
   num = num * num2 / gcdnum;
   return num;
 };
 
-let Spt = (num = 1, num2 = 1) => {
+exports.Com = Com;
+
+var Spt = function Spt() {
+  var num = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+  var num2 = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
   num2 = num + num2;
   num *= 100;
   return num / num2;
 };
 
-let nCr = (n = 1, r = 1) => {
+exports.Spt = Spt;
+
+var nCr = function nCr() {
+  var n = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+  var r = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
   //nCr
-  let x, z;
-  let y;
-  let age = 1;
+  var x, z;
+  var y;
+  var age = 1;
   y = n;
   z = r;
   x = 0;
@@ -49,7 +68,7 @@ let nCr = (n = 1, r = 1) => {
     }
   }
 
-  for (let i = 2; i <= z; i++) {
+  for (var i = 2; i <= z; i++) {
     age *= i;
   }
 
@@ -57,32 +76,39 @@ let nCr = (n = 1, r = 1) => {
   return y;
 };
 
-let Pow = (num, n) => {
-  //xのy乗
-  let nums = num;
+exports.nCr = nCr;
 
-  for (let i = 2; i <= n; i++) {
+var Pow = function Pow(num, n) {
+  //xのy乗
+  var nums = num;
+
+  for (var i = 2; i <= n; i++) {
     nums *= num;
   }
 
   return nums;
 };
 
-let Repetition = (x = 1) => {
-  //階乗
-  let age = 1;
+exports.Pow = Pow;
 
-  for (let i = 2; i <= x; i++) {
+var Repetition = function Repetition() {
+  var x = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+  //階乗
+  var age = 1;
+
+  for (var i = 2; i <= x; i++) {
     age *= i;
   }
 
   return age;
 };
 
-let nPr = (n, r) => {
+exports.Repetition = Repetition;
+
+var nPr = function nPr(n, r) {
   //nPr
-  let y;
-  let x = 0;
+  var y;
+  var x = 0;
   y = n;
 
   while (x == 0) {
@@ -109,9 +135,13 @@ let nPr = (n, r) => {
   return y;
 };
 
-let Gcd = (f = 1, x = 1) => {
+exports.nPr = nPr;
+
+var Gcd = function Gcd() {
+  var f = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+  var x = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
   //最大公約数
-  let r, tmp;
+  var r, tmp;
 
   if (f < x) {
     tmp = f;
@@ -132,7 +162,9 @@ let Gcd = (f = 1, x = 1) => {
   return x;
 };
 
-let Ratio = (a, b, x, y) => {
+exports.Gcd = Gcd;
+
+var Ratio = function Ratio(a, b, x, y) {
   //比率
   a *= y;
   b *= x;
@@ -141,15 +173,15 @@ let Ratio = (a, b, x, y) => {
     if (b % a == 0) {
       return b / a;
     } else {
-      return `${a}/${b}`;
+      return "".concat(a, "/").concat(b);
     }
   } else {
     if (a % b == 0) {
       return a / b;
     } else {
-      return `${b}/${a}`;
+      return "".concat(b, "/").concat(a);
     }
   }
 };
 
-export { Random, Push, Com, Spt, nCr, Pow, Repetition, nPr, Gcd, Ratio };
+exports.Ratio = Ratio;

@@ -1,1 +1,3 @@
-import './../../scss/java.scss';
+"use strict";
+
+require("./../../scss/java.scss");

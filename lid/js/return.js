@@ -1,5 +1,8 @@
+"use strict";
+
+require("../scss/return.scss");
+
 // JavaScript Document
-import '../scss/return.scss';
 $(function () {
   $("#heading").slideDown(1000);
 });

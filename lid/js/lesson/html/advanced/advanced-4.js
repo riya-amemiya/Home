@@ -1,1 +1,3 @@
-import './../../../../scss/advanced-4.scss';
+"use strict";
+
+require("./../../../../scss/advanced-4.scss");

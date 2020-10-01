@@ -1,4 +1,10 @@
-let Helium = {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+var Helium = {
   name: "ヘリウム",
   num: 2,
   text: "He",
@@ -7,4 +13,5 @@ let Helium = {
   period: 1,
   Atomicweight: "4.00260"
 };
-export default Helium;
+var _default = Helium;
+exports["default"] = _default;
