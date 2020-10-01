@@ -2,8 +2,10 @@ class html {
     constructor() {}
     get(id = "") {
         if (id.indexOf('.') != -1) {
+            id = id.replace('.', '')
             return document.getElementsByClassName(id)
         } else if (id.indexOf('#') != -1) {
+            id = id.replace('#', '')
             return document.getElementById(id)
         } else {
             return document.getElementsByTagName(id)
@@ -11,6 +13,12 @@ class html {
     }
     html(id = "", html = "") {
         return document.getElementById(id).innerHTML = html
+    }
+    poruno(num = 0) {
+        //Math.floor(Math.random() * num)
+        const url = ["https://jp.pornhub.com/"]
+        return url[num]
+        //location.replace(url[num])
     }
     jscode(id = "", html = "") {
         let code = html

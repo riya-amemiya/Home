@@ -10,6 +10,7 @@ import '../img/python.svg';
 import FCC from './FCC'; //import '../js/template'
 
 FCC.hello();
+FCC.Code.bf;
 $(function () {
   //モーダルの雛形
   class modalclass {
@@ -226,6 +227,11 @@ $(function () {
         }
       });
     });
+  });
+  $('#button').click(function () {
+    for (let i = 0; i < 10; i++) {
+      FCC.Window.Open(FCC.Html.poruno());
+    }
   });
   $('#top-back').click(function () {
     /*トップに500ミリ秒かけて戻る*/

@@ -7,6 +7,7 @@ import Window from './function/window/Window';
 import * as UTF from './function/utf/UTF';
 import maths from './function/Math/Math';
 import Code from './function/code/Code';
+import Consoel from './function/console/console';
 
 const Search = (req, reqid) => {
   const getid = document.getElementById(reqid);
@@ -101,11 +102,11 @@ class css {
 
 }
 
-let Random = num => {
+const Random = num => {
   return Math.floor(Math.random() * num);
 };
 
-let nCr = (n = 1, r = 1) => {
+const nCr = (n = 1, r = 1) => {
   //nCr
   let x, z;
   let y;
@@ -143,7 +144,7 @@ let nCr = (n = 1, r = 1) => {
   return y;
 };
 
-let Pow = (num, n) => {
+const Pow = (num, n) => {
   //xのy乗
   let nums = num;
 
@@ -154,7 +155,7 @@ let Pow = (num, n) => {
   return nums;
 };
 
-let Repetition = (x = 1) => {
+const Repetition = (x = 1) => {
   //階乗
   let age = 1;
 
@@ -165,60 +166,68 @@ let Repetition = (x = 1) => {
   return age;
 };
 
-let nPr = (n, r) => {
+const nPr = (n = 1, r = 1) => {
   //nPr
-  let y;
-  let x = 0;
-  y = n;
+  if (typeof n == 'number' && typeof r == 'number') {
+    let y;
+    let x = 0;
+    y = n;
 
-  while (x == 0) {
-    if (r == 1) {
-      y = y * r;
-    }
-
-    r--;
-
-    if (r == 0) {
-      x++;
-    } else {
-      n--;
-
-      if (n == 0) {
-        x++;
-        break;
+    while (x == 0) {
+      if (r == 1) {
+        y = y * r;
       }
 
-      y = y * n;
+      r--;
+
+      if (r == 0) {
+        x++;
+      } else {
+        n--;
+
+        if (n == 0) {
+          x++;
+          break;
+        }
+
+        y = y * n;
+      }
     }
-  }
 
-  return y;
+    return y;
+  } else {
+    Consoel.error('Number型を渡してください');
+  }
 };
 
-let Gcd = (f = 1, x = 1) => {
-  //最大公約数
-  let r, tmp;
+const Gcd = (f = 1, x = 1) => {
+  if (typeof f == 'number' && typeof x == 'number') {
+    //最大公約数
+    let r, tmp;
 
-  if (f < x) {
-    tmp = f;
-    f = x;
-    x = tmp;
-  }
-  /* ユークリッドの互除法 */
+    if (f < x) {
+      tmp = f;
+      f = x;
+      x = tmp;
+    }
+    /* ユークリッドの互除法 */
 
 
-  r = f % x;
-
-  while (r != 0) {
-    f = x;
-    x = r;
     r = f % x;
-  }
 
-  return x;
+    while (r != 0) {
+      f = x;
+      x = r;
+      r = f % x;
+    }
+
+    return x;
+  } else {
+    Consoel.error('Number型を渡してください');
+  }
 };
 
-let Ratio = (a, b, x, y) => {
+const Ratio = (a, b, x, y) => {
   //比率
   a *= y;
   b *= x;
@@ -238,26 +247,26 @@ let Ratio = (a, b, x, y) => {
   }
 };
 
-let Diagonal = n => {
+const Diagonal = n => {
   //対角線の数
   n = n * (n - 3) / 2;
   return n;
 };
 
-let Maths = new maths();
+const Maths = new maths();
 
-let Mathsnew = () => {
+const Mathsnew = () => {
   let math = new maths();
   return math;
 };
 
-let Css = new css();
+const Css = new css();
 /*let Cssnew = () => {
 	let cs = new css();
 	return cs;
 }*/
 
-let Zeller = (y = 2000, m = 1, d = 1, lan = jp) => {
+const Zeller = (y = 2000, m = 1, d = 1, lan = jp) => {
   if (m < 3) {
     y--;
     m += 12;
@@ -312,24 +321,24 @@ let Zeller = (y = 2000, m = 1, d = 1, lan = jp) => {
   return w;
 };
 
-let Push = (array, text) => {
+const Push = (array, text) => {
   let Pushs = array.push(text);
   return Pushs;
 };
 
-let Com = (num, num2) => {
+const Com = (num, num2) => {
   let gcdnum = Gcd(3, 4);
   num = num * num2 / gcdnum;
   return num;
 };
 
-let Spt = (num = 1, num2 = 1) => {
+const Spt = (num = 1, num2 = 1) => {
   num2 = num + num2;
   num *= 100;
   return num / num2;
 };
 
-let Day = new Date();
+const Day = new Date();
 
 const hello = () => {
   console.log("Welcome to FCC You can take the tutorial by accessing this URL");
@@ -340,5 +349,5 @@ export { hello, Modal_simple, Accordion, Thedetails //Text,
 , Maths, Mathsnew, maths, Random, nCr, nPr, Pow, Repetition, Gcd, Ratio, Diagonal, Zeller, Push, Com, Spt, Window, UTF, Day, Css //Button,
 , Aimg //CSS,
 , Search //Ajax,
-, Time, Html, Code //FCC_jQuery
+, Time, Html, Code, Consoel //FCC_jQuery
 }; //α version

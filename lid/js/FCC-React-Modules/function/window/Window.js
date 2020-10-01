@@ -32,7 +32,7 @@ class windows {
       return window.location.origin;
     };
 
-    this.Open = (url, name, optional, object = () => {}) => {
+    this.Open = (url, name, optional = 'top=' + window.innerHeight / 2 - 1000 / 2 + ',left=' + window.innerWidth / 2 - 1000 / 2 + ',width=1000,height=650', object = () => {}) => {
       object();
       return window.open(url, name, optional);
     };

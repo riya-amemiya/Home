@@ -1,84 +1,62 @@
-class windows
-{
-    constructor()
-    {
-        this.Url = () =>
-        {
+class windows {
+    constructor() {
+        this.Url = () => {
             return window.location.href;
         }
-        this.Urlhash = () =>
-        {
+        this.Urlhash = () => {
             return window.location.hash;
         }
-        this.Urlsearch = () =>
-        {
+        this.Urlsearch = () => {
             return window.location.search;
         }
-        this.Width = () =>
-        {
+        this.Width = () => {
             return window.innerWidth;
         }
-        this.Height = () =>
-        {
+        this.Height = () => {
             return window.innerHeight;
         }
-        this.ScreenWidth = () =>
-        {
+        this.ScreenWidth = () => {
             return window.screen.width;
         }
-        this.ScreenHeight = () =>
-        {
+        this.ScreenHeight = () => {
             return window.screen.height;
         }
-        this.Urlorigin = () =>
-        {
+        this.Urlorigin = () => {
             return window.location.origin;
         }
-        this.Open = (url, name, optional, object = () => { }) =>
-        {
+        this.Open = (url, name, optional = 'top=' + window.innerHeight / 2 - (1000 / 2) + ',left=' + window.innerWidth / 2 - (1000 / 2) + ',width=1000,height=650', object = () => {}) => {
             object()
             return window.open(url, name, optional);
         }
-        this.moveTo = (object, num1, num2) =>
-        {
+        this.moveTo = (object, num1, num2) => {
             return object.moveTo(num1, num2)
         }
-        this.resizeTo = (object, num1, num2) =>
-        {
+        this.resizeTo = (object, num1, num2) => {
             return object.resizeTo(num1, num2)
         }
-        this.resizeBy = (object, num1, num2) =>
-        {
+        this.resizeBy = (object, num1, num2) => {
             return object.resizeBy(num1, num2)
         }
-        this.Print = () =>
-        {
+        this.Print = () => {
             return window.print();
         }
-        this.Copy = (text = () => { }) =>
-        {
-            window.addEventListener('copy', (event) =>
-            {
+        this.Copy = (text = () => {}) => {
+            window.addEventListener('copy', (event) => {
                 text()
             });
         }
-        this.Load = (text = () => { }) =>
-        {
-            window.addEventListener('load', (event) =>
-            {
+        this.Load = (text = () => {}) => {
+            window.addEventListener('load', (event) => {
                 text()
             });
         }
-        this.Alert = (text) =>
-        {
+        this.Alert = (text) => {
             return window.alert(text);
         }
-        this.setInterval = (Callback, num) =>
-        {
+        this.setInterval = (Callback, num) => {
             return window.setInterval(Callback, num);
         }
-        this.onresize = () =>
-        {
+        this.onresize = () => {
             return window.onresize
         }
     }
