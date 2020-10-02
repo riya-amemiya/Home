@@ -3,4 +3,5 @@ Makefile
 package-lock.json
 package.json
 webpack.config.js
+webpack.configs.js
 public_html
