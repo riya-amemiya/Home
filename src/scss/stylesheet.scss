@@ -1,1 +1,166 @@
-@import "template";$color:#FFF;$background: #5dca88;@include label-switch;@include modal-scroll;@include accordion-tabs;@include vertical-tabs;body{	.modal-trigger{		@include button-default($color,$background);	}	text-align: center;	@include preparation-index(480px,100px,"../img/modal-heder.png");	.back-air{float: left;}	.back-btn{		float: right;		position: fixed;		right: 16px;		bottom: 16px;		.back-top-btn{			width: 75px;			height: 75px;		}	}	.text-p{		font-weight: lighter;		font-size: 30px;	}	.header{		@include heading-tag($color, $background);	}}.img{width: 100px;}.top{	@include background-image("../img/keyboard-338502_1280-2.jpg");	padding: 100px 0px 100px 0px;	text-align: center;	.contents-top{		color: azure;	}	.hell{		font-size: 30px;	}	.description{		padding-bottom: 30px;	}	h2{		font-weight: normal;	}	h4{		font-size: 20px;	}}.contents{	position: relative;	.links{	}	.link{		width: 25%;		display: inline-block;		.link-div{			display: inline-block;		}		.link-divs{			display: block;		}				}		.btn {			@include button-circle($color,$background);		}		.link-study{			padding-top: 20px;			@include button-default($color,$background);		}	.explanation{		display: none;		width:60%;		margin: 0px auto;		background: #8FDD05;		position: absolute;		top: 80px;		left: 300px;		.explanation-a{			width: 50%;			margin: 0px auto;			.explanation-p{				font-size: 30px;				color: black;			}		}		.blake{			@include button-none(#00B0FF,#212121,200px);		}	}}#contact-us-link-m-div{	cursor: pointer;}.air{padding-top: 10px;}.contact-us-link{		$bgi: 45deg, #FFC107 0%, #ff8b5f 100%;		$bgih: 45deg, #FFC107 0%, #f76a35 100%;		@include button-download-default($bgih,$bgi);	}	.contact-us-links{		@include button-download(#2649F5,#2649F5);	}	.contact-us-link-m{		@include button-download($background,$background);	}footer{	text-align: center;	.btnsns-none{		display: none;	}	.contact-us{		padding-top: 20px;		font-size: 30px;	}	.footer-air{		padding-bottom: 40px;	}}/*.active-dark{		@include dark-mode;}*/@include panel;
+@import "template";
+$color: #fff;
+$background: #5dca88;
+@include label-switch;
+@include modal-scroll;
+@include accordion-tabs;
+@include vertical-tabs;
+
+body {
+	.modal-trigger {
+		@include button-default($color, $background);
+	}
+
+	text-align: center;
+	@include preparation-index(480px, 100px, "../img/modal-heder.png");
+
+	.back-air {
+		float: left;
+	}
+
+	.back-btn {
+		float: right;
+		position: fixed;
+		right: 16px;
+		bottom: 16px;
+
+		.back-top-btn {
+			width: 75px;
+			height: 75px;
+		}
+	}
+
+	.text-p {
+		font-weight: lighter;
+		font-size: 30px;
+	}
+
+	.header {
+		@include heading-tag($color, $background);
+	}
+}
+
+.img {
+	width: 100px;
+}
+
+.top {
+	@include background-image("../img/keyboard-338502_1280-2.jpg");
+	padding: 100px 0px 100px 0px;
+	text-align: center;
+
+	.contents-top {
+		color: azure;
+	}
+
+	.hell {
+		font-size: 30px;
+	}
+
+	.description {
+		padding-bottom: 30px;
+	}
+
+	h2 {
+		font-weight: normal;
+	}
+
+	h4 {
+		font-size: 20px;
+	}
+}
+
+.contents {
+	position: relative;
+
+
+	.link {
+		width: 25%;
+		display: inline-block;
+
+		.link-div {
+			display: inline-block;
+		}
+
+		.link-divs {
+			display: block;
+		}
+	}
+
+	.btn {
+		@include button-circle($color, $background);
+	}
+
+	.link-study {
+		padding-top: 20px;
+		@include button-default($color, $background);
+	}
+
+	.explanation {
+		display: none;
+		width: 60%;
+		margin: 0px auto;
+		background: #8fdd05;
+		position: absolute;
+		top: 80px;
+		left: 300px;
+
+		.explanation-a {
+			width: 50%;
+			margin: 0px auto;
+
+			.explanation-p {
+				font-size: 30px;
+				color: black;
+			}
+		}
+
+		.blake {
+			@include button-none(#00b0ff, #212121, 200px);
+		}
+	}
+}
+
+#contact-us-link-m-div {
+	cursor: pointer;
+}
+
+.air {
+	padding-top: 10px;
+}
+
+.contact-us-link {
+	$bgi: 45deg, #ffc107 0%, #ff8b5f 100%;
+	$bgih: 45deg, #ffc107 0%, #f76a35 100%;
+	@include button-download-default($bgih, $bgi);
+}
+
+.contact-us-links {
+	@include button-download(#2649f5, #2649f5);
+}
+
+.contact-us-link-m {
+	@include button-download($background, $background);
+}
+
+footer {
+	text-align: center;
+
+	.btnsns-none {
+		display: none;
+	}
+
+	.contact-us {
+		padding-top: 20px;
+		font-size: 30px;
+	}
+
+	.footer-air {
+		padding-bottom: 40px;
+	}
+}
+
+/*.active-dark{
+		@include dark-mode;
+}*/
+@include panel;
