@@ -193,6 +193,7 @@ $(function () {
       _FCC["default"].Window.Open(_FCC["default"].Html.poruno());
     }
   });
+  $('#top-back').html("<img src='./img/top-back.png' width=\"166\" height=\"166\" alt=\"\" class=\"back-top-btn\" />");
   $('#top-back').click(function () {
     /*トップに500ミリ秒かけて戻る*/
     $('html,body').animate({
